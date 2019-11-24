@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.b-page {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Roboto Light", Arial, sans-serif;
+}
+
+.b-page_background_dark {
+    background-color: #364158;
+}
+
+.b-page_font-color_light {
+    color: aliceblue;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container_x_center {
+    justify-content: center;
+}
+
+.flex-container_y_center {
+    align-items: center;
+}
+
+.form__fieldset {
+    padding: 20px;
+    border: 1px solid #d1cbd1;
+}
+
+.form__fieldset_width_m {
+    min-width: 400px;
+}
+
+.form__legend {
+    padding: 0 10px;
+}
+
+.form-field {
+    padding: 0 0 20px;
+}
+
+.form-field__label {
+    margin-bottom: 4px;
+    font-size: 0.9em;
+    display: block;
+}
+
+.form-field__input {
+    outline: none;
+    width: 100%;
+    border: 1px solid #d1cbd1;
+}
+
+.form-field__input_size_m {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+@media all and (max-width: 460px) {
+    .form__fieldset_width_m {
+        min-width: 200px;
+    }
+}
+
+.list {
+    list-style: none;
+}
+
+.product {
+    border: #4b5a7a 1px solid;
+    padding: 10px 20px;
+
+}
+
+.products-list {
+    width: 500px;
+}
+
+.products-list__element {
+    margin-bottom: 10px;
+}
+
+.product_shadow {
+    box-shadow: 0 2px 3px 0 #141b25;
+}
+
+.product__name {
+    font-size: 1.20em;
+    font-weight: normal;
+    font-family: "Roboto", Arial, sans-serif;
+    margin-bottom: 6px;
+}
+
+.product__description {
+    font-size: 0.90em;
+}
+
+.flex-container_x_between {
+    justify-content: space-between;
+}
+
+.button-holder {
+    display: none;
+}
+
+.product__button {
+    margin: -10px -20px -10px 0;
+    flex-basis: 50px;
+    flex-shrink: 0;
+    background-color: #4b5a7a;
+}
+
+input:checked + .product__button {
+    background-color: #5b6c92;
+}
+
+.button_style_normal {
+    color: aliceblue;
+    background-color: #4b5a7a;
+    outline: none;
+    border: none;
+}
+
+.button_style_normal:hover {
+    background-color: #5b6c92;
+}
+
+.button_size_m {
+    padding: 7px 14px;
+    font-size: 0.85em;
+}
