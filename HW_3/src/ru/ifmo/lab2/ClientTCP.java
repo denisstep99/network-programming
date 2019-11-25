@@ -12,12 +12,10 @@ public class ClientTCP {
             Socket clientSocket = new Socket("localhost", 1500);
 
             // Получаем ссылку на поток, связанный с сокетом
-            ObjectInputStream in =
-                    new ObjectInputStream(clientSocket.getInputStream());
+            ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream());
 
             // Извлекаем объект из входного потока
-            DateMessage dateMessage =
-                    (DateMessage) in.readObject();
+            DateMessage dateMessage = (DateMessage) in.readObject();
 
             // Выводим полученные данные в консоль
             System.out.println(dateMessage.getMessage());

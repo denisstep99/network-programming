@@ -21,6 +21,8 @@
 %>
 Сегодня  <%= d %>/<%= m %>/<%= g %> Greenwich Mean Time: <%= z %>
 <% out.println("<h3>  DatePage.jsp показан ниже из другой JSP страницы</h3>");%>
+
+<%-- происходит вставка кода из файла DateJSP.jsp --%>
 <h1> Текущее время: <jsp:include page="DateJSP.jsp" flush="true"/></h1>
 
 </body>

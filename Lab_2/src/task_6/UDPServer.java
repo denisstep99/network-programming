@@ -52,7 +52,6 @@ public class UDPServer implements Runnable {
                 sendData = answer.getBytes();
 
                 int port = receivePacket.getPort();
-                System.out.println(port);
                 socket.send(new DatagramPacket(sendData, sendData.length, receivePacket.getAddress(), port));
             }
         } catch (IOException e) {

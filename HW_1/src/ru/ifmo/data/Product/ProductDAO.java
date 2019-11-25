@@ -26,7 +26,7 @@ public class ProductDAO {
     }
 
     private Connection getConnection(int port) throws Exception {
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/business" + port + '/' + this.DBName, this.userName, this.password);
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:" + port + '/' + this.DBName, this.userName, this.password);
         return connection;
     }
 

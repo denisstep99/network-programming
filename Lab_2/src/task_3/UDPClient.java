@@ -23,7 +23,7 @@ public class UDPClient {
             /* Создается новый объект DatagramSocket и связывается с портом по умолчанию */
             socket = new DatagramSocket();
             address = InetAddress.getByName("127.0.0.1");
-            buffer = "I'm a client".getBytes();
+            buffer = new byte[256];
             packet = new DatagramPacket(buffer, buffer.length, address, 1501);
 
             /* Посылается DatagramPacket на сервер */
@@ -38,6 +38,7 @@ public class UDPClient {
             System.out.println("Received message : " + str.trim());
             System.out.println("Do you want continue (Yes/No) : ");
             str2 = br.readLine();
+            System.out.println();
 
             /* Выход из цикла while */
             if (str2.toLowerCase().equals("no")) break;

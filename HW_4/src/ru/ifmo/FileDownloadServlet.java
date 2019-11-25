@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-@WebServlet(name = "downloadServlet", urlPatterns = { "/download" })
+@WebServlet(name = "uploadServlet", urlPatterns = { "/upload" })
 @MultipartConfig(fileSizeThreshold = 5_242_880, // 5MB
         maxFileSize = 20_971_520L, // 20MB
         maxRequestSize = 41_943_040L // 40MB
@@ -55,7 +55,7 @@ public class FileDownloadServlet extends HttpServlet {
         String filename = name.substring(i + 1);
         System.out.println("Имя файла->>>>>>>>>>>>>>>>>" + filename);
         File file = new File(
-                "C:\\Users\\Deniska\\IdeaProjects\\HomeWork\\HW_4"
+                "C:\\Users\\Deniska\\IdeaProjects\\HomeWork\\HW_4\\"
                         + filename);
         OutputStream to_file = new FileOutputStream(file);
         System.out.println("Absolute Path at server=" + file.getAbsolutePath());

@@ -2,6 +2,7 @@ package ru.ifmo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -37,6 +38,8 @@ public class EmployeeServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             response.setContentType("text/html;charset=UTF-8");
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
             // Получение из http-запроса значения параметра lastname, null, если нет
             String lastname = request.getParameter("lastname");
 

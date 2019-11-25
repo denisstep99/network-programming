@@ -22,13 +22,13 @@ public class ChatServer implements Runnable {
             DatagramSocket serverSocket = new DatagramSocket(8877);
 
             byte[] receiveData = new byte[65];
-            byte[] sendData = new byte[65];
 
             System.out.println("Enter a username: ");
             String serverUsername = inFromUser.readLine();
 
             System.out.println("Send message...");
 
+            byte[] sendData;
             while (true) {
                 DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
                 serverSocket.receive(receivePacket);

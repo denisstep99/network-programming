@@ -38,18 +38,17 @@ public class ServerTCP extends Thread {
             while (true) {
                 // Ожидание запросов соединения от клиентов
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Connection accepted from " + 				clientSocket.getInetAddress().getHostAddress());
+                System.out.println("Connection accepted from " + clientSocket.getInetAddress().getHostAddress());
 
                 // Получение выходного потока,
                 // связанного с объектом Socket
-                ObjectOutputStream out =
-                        new ObjectOutputStream(
-                                clientSocket.getOutputStream());
+                ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
 
                 // Создание объекта для передачи клиентам
                 DateMessage dateMessage = new DateMessage(
                         Calendar.getInstance().getTime(),
-                        "Текущая дата/время на сервере");
+                        "Текущая дата/время на сервере"
+                );
                 // Запись объекта в выходной поток
                 out.writeObject(dateMessage);
                 out.close();
